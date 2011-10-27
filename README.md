@@ -4,7 +4,7 @@ CrBoy's Dotflies
 
 Introduction
 ------------
-Here's some of my dotfiles in usual. A dotflie means those files begin with a `.`. They usually stand for a configurarion of some software.
+Here's some of my dotfiles in usual. A dotflie means those files begin with a `.`, e.g. `.zshrc`, `.screenrc`, or `.vimrc`. They usually stand for a configurarion of some software.
 
 I like to use zsh as my shell on Linux and MacOSX. As a C/C++ programmer, I use ctags to create databases for my code. Other dotfiles are also helpful to me. ;)
 
@@ -26,7 +26,7 @@ or wget (Linux often has wget):
 
 Acknowledgements
 ----------------
-[Aminzai] and [mrmoneyc] share their zsh to me and give me guide on zsh.
+[Aminzai] and [mrmoneyc] shared their zshrc to me and give me guide on zsh.
 
 [Aminzai]: https://github.com/aminzai
 [mrmoneyc]: https://github.com/mrmoneyc
