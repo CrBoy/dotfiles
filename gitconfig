@@ -1,0 +1,26 @@
+[user]
+	name = CrBoy
+	email = crboy@crboy.net
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	pager = true
+
+[merge]
+	tool = vimdiff
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	log = log --graph
+
