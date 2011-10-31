@@ -22,5 +22,5 @@
 	ci = commit
 	co = checkout
 	br = branch
-	log = log --graph
+	lg = log --graph
 
