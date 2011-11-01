@@ -26,8 +26,8 @@ or wget (Linux often has wget):
 
 Acknowledgements
 ----------------
-[Aminzai] and [mrmoneyc] shared their zshrc to me and give me guide on zsh.
-The gdb/stl\_views is from <http://www.yolinux.com/TUTORIALS/GDB-Commands.html>. It's a good utility for print out STL containers.
+- [Aminzai] and [mrmoneyc] shared their zshrc to me and give me guide on zsh.
+- The gdb/stl\_views is from <http://www.yolinux.com/TUTORIALS/GDB-Commands.html>. It's a good utility for print out STL containers.
 
 [Aminzai]: https://github.com/aminzai
 [mrmoneyc]: https://github.com/mrmoneyc
