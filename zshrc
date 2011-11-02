@@ -1,6 +1,10 @@
 # CrBoy's zshrc
 # =============
 
+# Terminal type
+# -------------
+TERM=xterm-256color
+
 # Language
 # --------
 export LANG=zh_TW.UTF-8
