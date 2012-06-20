@@ -1,5 +1,6 @@
 
 source ~/.gdb/stl_views
+source ~/.gdb/functions
 
 set history save on
 set history size 32
