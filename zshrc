@@ -280,11 +280,6 @@ function setup_linux {
 
 function setup_macos {
 	alias ls='ls -G'
-
-	# MacPorts Installation Setting
-	export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-	export MANPATH="`/usr/bin/manpath`"
-	export MANPATH="/opt/local/share/man:$MANPATH"
 }
 
 if [ `uname` = "Linux" ]; then
