@@ -24,3 +24,5 @@
 	br = branch
 	lg = log --graph
 
+[push]
+	default = simple
