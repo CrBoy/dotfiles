@@ -5,6 +5,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.dotfiles/gitignore
+	whitespace = indent-with-non-tab, space-before-tab, trailing-space, cr-at-eol
 
 [color]
 	ui = auto
@@ -22,7 +23,9 @@
 	ci = commit
 	co = checkout
 	br = branch
-	lg = log --graph
+	lg = log --graph --all --decorate
+	lg1 = log --graph --all --decorate --oneline
+	lgs = log --graph --all --decorate --oneline --max-count=20
 
 [push]
 	default = simple
