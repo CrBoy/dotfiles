@@ -9,11 +9,8 @@ die(){
 
 [ -e "$DOTFILES" ] && die "$DOTFILES already exists."
 
-git clone git://github.com/CrBoy/dotfiles.git "$DOTFILES"
+git clone --recursive https://github.com/CrBoy/dotfiles.git "$DOTFILES"
 cd "$DOTFILES"
-git submodule update --init
 
-./install.sh
-
-echo "CrBoy's dotfiles installed."
+./install.sh && echo "CrBoy's dotfiles installed."
 
