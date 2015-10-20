@@ -26,6 +26,7 @@
 	lg = log --graph --all --decorate
 	lg1 = log --graph --all --decorate --oneline
 	lgs = log --graph --all --decorate --oneline --max-count=20
+	lgss = log --graph --all --decorate --oneline --simplify-by-decoration
 
 [push]
 	default = simple
