@@ -134,9 +134,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>457 85 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 105 1132 707 0 0 1440 877 </string>
+	<string>0 34 1146 707 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>279 4 1132 707 0 0 1440 877 </string>
+	<string>1440 -387 1080 1264 1440 -1020 1080 1897 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>25 50 572 474 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -966,9 +966,9 @@
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.63921570777893066</real>
+				<real>0.99818897247314453</real>
 				<key>Green Component</key>
-				<real>0.039215687662363052</real>
+				<real>0.0</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -984,7 +984,7 @@
 			<key>Ansi 6 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.63921570777893066</real>
+				<real>0.99818897247314453</real>
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
@@ -1691,9 +1691,9 @@
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.63897955417633057</real>
+				<real>1</real>
 				<key>Green Component</key>
-				<real>0.04104214534163475</real>
+				<real>0.0</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -1709,7 +1709,7 @@
 			<key>Ansi 6 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.638957679271698</real>
+				<real>1</real>
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
@@ -2322,7 +2322,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>466945736.39540702</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>467058219.01475197</real>
+	<real>467186737.971286</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2385,7 +2385,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-20T12:27:49Z</date>
+	<date>2015-10-22T06:05:34Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
