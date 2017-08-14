@@ -4,7 +4,7 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.dotfiles/gitignore
+	excludesfile = ~/.gitignore
 	whitespace = indent-with-non-tab, space-before-tab, trailing-space, cr-at-eol
 
 [color]
