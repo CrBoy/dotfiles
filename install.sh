@@ -20,6 +20,7 @@ hash curl >/dev/null 2>&1 && {
 }
 
 stow git && echo 'git stowed'
+stow vim && echo 'vim stowed'
 
 ${LN} $PWD/zshrc                 $INSTALL_DIR/.zshrc         && echo 'zshrc installed'
 ${LN} $PWD/ctags                 $INSTALL_DIR/.ctags         && echo 'ctags settings installed'
