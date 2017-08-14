@@ -54,8 +54,9 @@ plugins=(git)
 
 # User configuration
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH=`echo $PATH | sed 's|/usr/sbin|/usr/local/sbin:&|'`
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,3 +89,7 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 export EDITOR=vim
 export LESS="$LESS -XF"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
