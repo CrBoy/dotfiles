@@ -8,7 +8,7 @@ Here's some of my dotfiles in usual. A dotflie means those files begin with a `.
 
 If [git] and [stow] is installed on the machine, these settings could be installed by only one step on most of Unix-like OS.
 
-[git]: http://git-scm.com/
+[git]: https://git-scm.com/
 [stow]: https://www.gnu.org/software/stow/
 
 One-Step Install

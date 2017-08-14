@@ -20,11 +20,7 @@ hash curl >/dev/null 2>&1 && {
 }
 
 stow git && echo 'git stowed'
-stow vim && echo 'vim stowed'
-
-${LN} $PWD/zshrc                 $INSTALL_DIR/.zshrc         && echo 'zshrc installed'
-${LN} $PWD/ctags                 $INSTALL_DIR/.ctags         && echo 'ctags settings installed'
-${LN} $PWD/tmux.conf             $INSTALL_DIR/.tmux.conf     && echo 'tmux.conf installed'
-${LN} $PWD/gdb                   $INSTALL_DIR/.gdb           && \
-${LN} $INSTALL_DIR/.gdb/gdbinit  $INSTALL_DIR/.gdbinit       && echo 'gdb settings installed'
+stow vim && vim/install.sh && echo 'vim stowed'
+stow zshrc && echo 'zshrc stowed'
+stow tmux && echo 'tmux stowed'
 
