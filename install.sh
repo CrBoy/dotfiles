@@ -23,4 +23,5 @@ stow git && echo 'git stowed'
 stow vim && vim/install.sh && echo 'vim stowed'
 stow zshrc && echo 'zshrc stowed'
 stow tmux && echo 'tmux stowed'
+stow Spectacle && echo 'Spectacle stowed'
 
