@@ -20,7 +20,7 @@ hash curl >/dev/null 2>&1 && {
 }
 
 stow git && echo 'git stowed'
-stow vim && vim/install.sh && echo 'vim stowed'
+stow vimrc && vimrc/install.sh && echo 'vimrc stowed'
 stow zshrc && echo 'zshrc stowed'
 stow tmux && echo 'tmux stowed'
 stow Spectacle && echo 'Spectacle stowed'
