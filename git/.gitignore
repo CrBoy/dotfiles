@@ -3,3 +3,5 @@
 .*.swp
 doc/tags
 .ruby-gemset
+
+local_temp/

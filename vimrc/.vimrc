@@ -11,6 +11,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'slim-template/vim-slim'
+Plug 'digitaltoad/vim-pug'
+Plug 'othree/yajs.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -113,3 +119,5 @@ nmap <leader>e :NERDTreeToggle<CR>
 "Bundle 'mattn/gist-vim.git'
 "let g:gist_detect_filetype = 1
 
+" Vim-vue
+let g:vue_disable_pre_processors=1
