@@ -6,17 +6,20 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tpope/vim-fugitive'
 " Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'slim-template/vim-slim'
-Plug 'digitaltoad/vim-pug'
-Plug 'othree/yajs.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'posva/vim-vue'
+"Plug 'slim-template/vim-slim'
+"Plug 'digitaltoad/vim-pug'
+"Plug 'othree/yajs.vim'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'posva/vim-vue'
+
+Plug 'itchyny/lightline.vim'
+set laststatus=2
 
 call plug#end()
 
@@ -52,7 +55,7 @@ set showmode
 set showcmd
 set ruler
 
-" tab spaces
+" tab/spaces
 " ----------
 set tabstop=4
 set softtabstop=4
@@ -84,17 +87,17 @@ autocmd FileType tex set spell
 
 " vim-airline
 " -----------
-set laststatus=2
-let g:airline_theme = "sol"
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#show_buffers = 0
-"let g:airline#extensions#tabline#show_tabs = 0
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-"let g:airline#extensions#tabline#show_tab_nr = 1
-"let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline#extensions#tabline#buffer_nr_format = '%s:'
+"set laststatus=2
+"let g:airline_theme = "sol"
+"let g:airline#extensions#tabline#enabled = 1
+""let g:airline#extensions#tabline#show_buffers = 0
+""let g:airline#extensions#tabline#show_tabs = 0
+"let g:airline#extensions#tabline#left_sep = ''
+"let g:airline#extensions#tabline#left_alt_sep = ''
+"let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+""let g:airline#extensions#tabline#show_tab_nr = 1
+""let g:airline#extensions#tabline#buffer_nr_show = 1
+""let g:airline#extensions#tabline#buffer_nr_format = '%s:'
 
 " Plugin config
 " =======
@@ -120,4 +123,4 @@ nmap <leader>e :NERDTreeToggle<CR>
 "let g:gist_detect_filetype = 1
 
 " Vim-vue
-let g:vue_disable_pre_processors=1
+"let g:vue_disable_pre_processors=1
