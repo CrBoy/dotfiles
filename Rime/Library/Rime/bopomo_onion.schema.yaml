@@ -1,0 +1,269 @@
+# Rime schema
+# encoding: utf-8
+schema:
+  schema_id: bopomo_onion
+  name: "☆注音(洋蔥版)☆"
+  version: "201707"
+  author:
+    - 洋蔥
+    # 以佛振注音支持聲韻亂序方案改編
+  description: |
+    注音符號輸入，採用「大千式」鍵盤排列。
+
+  dependencies:
+    - cangjie5
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "英文"]
+  - name: full_shape
+    reset: 0
+    states: ["半形", "全形"]
+  - name: simplification
+    states: ["繁體", "简体"]
+  - name: extended_charset  #開發版鼠鬚管不能作用
+    reset: 1
+    states: ["通用", "增廣"]
+
+engine:
+  filters:
+    - reverse_lookup_filter@bpm_reverse_lookup
+    - uniquifier
+    - cjk_minifier #開發版鼠鬚管不能作用
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@reverse2_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@bopomo_onion_phrase
+    - script_translator@reverse2_lookup
+    - script_translator
+
+menu:
+  alternative_select_keys: "QASDFG"
+  page_size: 6
+
+simplifier:
+  tips: all
+
+speller:
+  alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-3467 "
+  initials: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-"
+  finals: " 6347"
+  delimiter: "|"
+  use_space: true
+  algebra:
+    - xform/^m(\d)$/mu$1/
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zi/z/
+    - xform/zhi/Z/
+    - xform/zh/Z/
+    - xform/^zhi?/Z/
+    - xform/^chi?/C/
+    - xform/^shi?/S/
+    - xform/^([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - derive/([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
+    - derive/([iuv])([aoeEAIOUMNKGR])/$2$1/
+    - derive/([bpmfdtnlgkhjqxZCSrzcs])([aoeEAIOUMNKGR])/$2$1/
+    - derive/([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
+    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs]).+$/$1/
+    - abbrev/^([iuv])([aoeEAIOUMNKGR])/$1/
+    - abbrev/^([A-Za-z]+)\d$/$1/
+    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs]).+(\d)$/$1$2/
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|'
+###################################以下開始幾大段為各種翻譯器######################################
+translator:
+  dictionary: bopomo_onion.extended
+  prism: bopomo_onion
+  enable_charset_filter: true  #開發版鼠鬚管不能作用
+  initial_quality: "0"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+###################################以下為短語####################################################
+bopomofo_mix1_phrase:
+  dictionary: ""
+  user_dict: bopomo_onion_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+###################################以下為使用xxx反查注音######################################
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: cangjie5
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "`"
+  tips: "《倉頡反查》▶" 
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+
+bpm_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: true
+  dictionary: bopomo_onion.extended
+  comment_format:
+    - xform/e?r5$/er5/
+    - xform/yong/vG/
+    - xform/yun/vN/
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi/Z/
+    - xform/shi/S/
+    - xform/chi/C/
+    - xform/ri/r/
+    - xform/zi/z/
+    - xform/si/s/
+    - xform/ci/c/
+    - xform/yu/v/
+    - xform/zh/Z/
+    - xform/ch/C/
+    - xform/sh/S/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - xform/1//
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+
+###################################以下為符號處理######################################
+punctuator:
+  full_shape:
+#    " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" : ）
+    "_" : [ ——, － ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+  half_shape:
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : { commit: "？" }
+    ":" : [ "：", "；" ]
+    "'" : [ "‧", "·", "…", "……", "‘", "’", "“", "”" ]
+    "\"" : { commit: "、" }
+    "\\" : [ "\\", "＼" ]
+    "|" : [ "|", "｜", "¦", "§", "¶", "⁋", "❡" ]
+    "`": [ "`", "-", "=", "[", "]", "\\", ";", "'", ",", ".", "/" ]
+    "~" : [ "〜", "~", "～" ]
+    "!" : { commit: "！" }
+    "@" : { commit: "@" }
+    "#" : { commit: "#" }
+    "%" : [ "%", "％", "‰", "‱", "°", "℃", "Å", "℉", "㏃", "㏆", "㎈", "㏄", "㏅", "㎝", "㎠", "㎤", "㏈", "㎗", "㎙", "㎓", "㎬", "㏉", "㏊", "㏋", "㎐", "㏌", "㎄", "㎅", "㎉", "㎏", "㎑", "㏍", "㎘", "㎞", "㏎", "㎢", "㎦", "㎪", "㏏", "㎸", "㎾", "㏀", "㏐", "㏓", "㎧", "㎨", "㎡", "㎥", "㎃", "㏔", "㎆", "㎎", "㎒", "㏕", "㎖", "㎜", "㎟", "㎣", "㏖", "㎫", "㎳", "㎷", "㎹", "㎽", "㎿", "㏁", "㎁", "㎋", "㎚", "㎱", "㎵", "㎻", "㏘", "㎩", "㎀", "㎊", "㏗", "㏙", "㏚", "㎰", "㎴", "㎺", "㎭", "㎮", "㎯", "㏛", "㏜", "㎔", "㏝", "㎂", "㎌", "㎍", "㎕", "㎛", "㎲", "㎶", "㎼" ]
+    "$" : [ "$", "＄", "¥", "￥", "€", "£", "￡", "₤", "¢", "￠", "₵", "₡", "¤", "৳", "฿", "₠", "₢", "₣", "₥", "₦", "₧", "₩", "₪", "₫", "₭", "₮", "₯", "₰", "₱", "₲", "₳", "₴", "₶", "₷", "₸", "₹", "₺", "₨", "﷼" ]
+    "^" : { commit: "^" }
+    "&" : [ "&", "＆", "＃", ⅟, ½, ↉, ⅓, ⅔, ¼, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒ ]
+    "*" : [ "*", ＊, ·, ・, ×, ※, ❂, ★, ☆, ✡, ❋, ❊, ❉, ❈, ❇, ❆, ❅, ❄, ❃, ❁, ❀, ✿, ✾, ✽, ✼, ✻, ✺, ✹, ✸, ✷, ✶, ✵, ✴, ✳, ✲, ✱, ✰, ✯, ✮, ✭, ✬, ✫, ✪, ✩, ✧, ✦, ✥, ✤, ✣, ✢, ⛤, ⛥, ⛦, ⛧ ]
+    "(" : { commit: （ }
+    ")" : { commit: ） }
+    "_" : [ "_", "-", "——", "－" ]
+    "+" : [ "+", "-", "×", "÷", "±", "=", "≠", "＝", "＋", "－", "＜", "＞", "∈", "∏", "∑", "≮", "≯", "∕", "√", "∝", "∞", ∟, ∠, ∥, ∧, ∨, ∩, ∪, ∫, ∮, ∴, ∵, ∷, ∽, ≈, ≌, ≒, ≡, ≤, ≥, ≦, ≧, ⊕, ⊙, ⊥, ⊿, ㏑, ㏒ ]
+    "=" : [ "=", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "{", "}", "|", ":", "\"", "<", ">", "?" ]
+    "[" : [ 〈, 《, 『, 【, 〖, 〔, ［, ｛ ]
+    "]" : [ 〉, 》, 』, 】, 〗, 〕, ］, ｝ ]
+    "{" : { commit: "「" }
+    "}" : { commit: "」" }
+  import_preset: bopomo_symbols
+
+###################################以下為按鍵處理######################################
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
+    - {accept: BackSpace, send: Control+BackSpace, when: has_menu}
+    - {accept: Control+Shift+5, toggle: emoji_segestion, when: always}
+    - {accept: space, send: Return, when: paging}
+    - {accept: 3, send: Escape, when: composing}
+    - {accept: 3, send: 3, when: has_menu}
+    - {accept: 4, send: Escape, when: composing}
+    - {accept: 4, send: 4, when: has_menu}
+    - {accept: 6, send: Escape, when: composing}
+    - {accept: 6, send: 6, when: has_menu}
+    - {accept: 7, send: Escape, when: composing}
+    - {accept: 7, send: 7, when: has_menu}
+
+#以下editor功能舊版無法作用
+editor:
+  bindings:
+    space: commit_composition
+
+recognizer:
+  patterns:
+    uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
+    punct: "^=[-.,;/0-9a-z=]*?$"
+    reverse2_lookup: "^`[a-z ]*`*?$"
+
