@@ -5,6 +5,7 @@ brew "coreutils"
 brew "docker-completion"
 brew "fish"
 brew "git"
+brew "iproute2mac"
 brew "mas"
 brew "mosh"
 brew "mtr"
@@ -15,7 +16,7 @@ brew "telnet"
 brew "tree"
 brew "vim"
 brew "wine"
-cask "onepassword"
+cask "1password"
 cask "discord"
 cask "docker"
 cask "dropbox"
@@ -35,5 +36,6 @@ mas "Bear", id: 1091189122
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft Outlook", id: 985367838
 mas "OneDrive", id: 823766827
+mas "Pocket", id: 568494494
 mas "Slack", id: 803453959
 mas "Trello", id: 1278508951
