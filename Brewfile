@@ -11,31 +11,39 @@ brew "mosh"
 brew "mtr"
 brew "nmap"
 brew "node"
+brew "pyenv"
 brew "stow"
 brew "telnet"
 brew "tree"
 brew "vim"
 brew "wine"
 cask "1password"
+cask "aliwangwang"
 cask "discord"
 cask "docker"
 cask "dropbox"
 cask "evernote"
 cask "firefox"
+cask "gnucash"
 cask "google-chrome"
 cask "iterm2"
 cask "keka"
 cask "kobo"
+cask "marp"
 cask "microsoft-teams"
+cask "minecraft"
+cask "oracle-jdk"
 cask "quip"
 cask "steam"
 cask "telegram"
+cask "typora"
 cask "visual-studio-code"
 cask "wireshark"
-mas "Bear", id: 1091189122
-mas "Microsoft OneNote", id: 784801555
-mas "Microsoft Outlook", id: 985367838
-mas "OneDrive", id: 823766827
-mas "Pocket", id: 568494494
-mas "Slack", id: 803453959
-mas "Trello", id: 1278508951
+mas "", id: 425264550
+mas "", id: 823766827
+mas "", id: 1091189122
+mas "", id: 803453959
+mas "", id: 1278508951
+mas "", id: 568494494
+mas "", id: 784801555
+mas "", id: 985367838
