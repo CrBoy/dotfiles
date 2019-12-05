@@ -1,0 +1,133 @@
+# Recent settings file for Wireshark 3.0.3.
+#
+# This file is regenerated each time Wireshark is quit.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /Users/crboy/sandbox/taiwanlife2.pcap
+recent.capture_file: /Users/crboy/sandbox/any514.pcap
+recent.capture_file: /Users/crboy/sandbox/any514-2.pcap
+recent.capture_file: /Users/crboy/sandbox/test.pcap
+recent.capture_file: /Users/crboy/Downloads/Ihmed To HQ.root.1.pcap
+recent.capture_file: /Users/crboy/Downloads/Ihmed To HQ.root.1 (1).pcap
+recent.capture_file: /Users/crboy/Downloads/Ihmed  to Green.root.1.pcap
+recent.capture_file: /Users/crboy/Downloads/wan1.root.2.pcap
+recent.capture_file: /Users/crboy/Downloads/wan1.root.2 (1).pcap
+recent.capture_file: /Users/crboy/Downloads/2.pcapng
+
+######## Recent capture filters (latest last), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: ip.addr == 224.0.1.20 and ip.src == 224.0.1.20
+recent.display_filter: udp.stream eq 49
+recent.display_filter: ip.addr == 224.0.1.20
+recent.display_filter: udp.stream eq 5
+recent.display_filter: !(udp.stream eq 6)
+recent.display_filter: udp.stream eq 6
+recent.display_filter: ip.addr == 192.168.5.255
+recent.display_filter: ip.addr == 192.168.1.255
+recent.display_filter: !arp and !dhcp and !dhcpv6
+recent.display_filter: !arp and !dhcp
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 247
+gui.geometry_main_y: 47
+gui.geometry_main_width: 2203
+gui.geometry_main_height: 1278
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: FALSE
+
+# Statusbar left pane size.
+# Decimal number.
+gui.geometry_status_pane: 250
+
+# Statusbar middle pane size.
+# Decimal number.
+gui.geometry_status_pane_right: 250
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if npf.sys isn't loaded on Windows >= 6.0.
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_no_npf: TRUE
+
+# Geometry and maximized state of ip_hosts window.
+# Decimal integers.
+gui.geom.ip_hosts.x: 669
+gui.geom.ip_hosts.y: 119
+gui.geom.ip_hosts.width: 1192
+gui.geom.ip_hosts.height: 1089
+# TRUE or FALSE (case-insensitive).
+gui.geom.ip_hosts.maximized: FALSE
+
+# Geometry and maximized state of dests window.
+# Decimal integers.
+gui.geom.dests.x: 938
+gui.geom.dests.y: 439
+gui.geom.dests.width: 800
+gui.geom.dests.height: 459
+# TRUE or FALSE (case-insensitive).
+gui.geom.dests.maximized: FALSE
+
+# Geometry and maximized state of IOGraphDialog window.
+# Decimal integers.
+gui.geom.IOGraphDialog.x: 913
+gui.geom.IOGraphDialog.y: 348
+gui.geom.IOGraphDialog.width: 850
+gui.geom.IOGraphDialog.height: 640
+# TRUE or FALSE (case-insensitive).
+gui.geom.IOGraphDialog.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 377
+gui.geom.PacketDialog.y: 49
+gui.geom.PacketDialog.width: 1750
+gui.geom.PacketDialog.height: 1129
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
+
+# Geometry and maximized state of FollowStreamDialog window.
+# Decimal integers.
+gui.geom.FollowStreamDialog.x: 0
+gui.geom.FollowStreamDialog.y: 0
+gui.geom.FollowStreamDialog.width: 2560
+gui.geom.FollowStreamDialog.height: 1440
+# TRUE or FALSE (case-insensitive).
+gui.geom.FollowStreamDialog.maximized: TRUE
+
+# Geometry and maximized state of DisplayFilterExpressionDialog window.
+# Decimal integers.
+gui.geom.DisplayFilterExpressionDialog.x: 604
+gui.geom.DisplayFilterExpressionDialog.y: 29
+gui.geom.DisplayFilterExpressionDialog.width: 1468
+gui.geom.DisplayFilterExpressionDialog.height: 1278
+# TRUE or FALSE (case-insensitive).
+gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"

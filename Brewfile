@@ -14,7 +14,7 @@ brew "coreutils"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
 # Play, record, convert, and stream audio and video
-brew "ffmpeg"
+#brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Distributed revision control system
@@ -28,7 +28,7 @@ brew "jq"
 # Mac App Store command-line interface
 brew "mas"
 # Implementation of 'offline nested' attack by Nethemba
-brew "mfoc"
+#brew "mfoc"
 # Remote terminal application
 brew "mosh"
 # 'traceroute' and 'ping' in a single tool
@@ -56,29 +56,29 @@ brew "wine"
 # General-purpose lossless data-compression library
 brew "zlib"
 cask "1password"
-cask "aliwangwang"
-cask "burp-suite"
+#cask "aliwangwang"
+#cask "burp-suite"
 cask "discord"
 cask "docker"
-cask "dotnet-sdk"
-cask "dropbox"
-cask "evernote"
+#cask "dotnet-sdk"
+#cask "dropbox"
+#cask "evernote"
 cask "firefox"
 cask "fork"
-cask "github"
+#cask "github"
 cask "gnucash"
 cask "google-chrome"
-cask "hyper"
-cask "insomnia"
+#cask "hyper"
+#cask "insomnia"
 cask "iterm2"
 cask "keka"
 cask "kobo"
-cask "marp"
+#cask "marp"
 cask "microsoft-teams"
 cask "minecraft"
 cask "oracle-jdk"
-cask "quip"
-cask "sourcetree"
+#cask "quip"
+#cask "sourcetree"
 cask "steam"
 cask "telegram"
 cask "typora"
@@ -91,8 +91,8 @@ mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft Word", id: 462054704
-mas "Nfc Ideas", id: 1245536234
-mas "NFC Tools for Desktop", id: 1392471092
+#mas "Nfc Ideas", id: 1245536234
+#mas "NFC Tools for Desktop", id: 1392471092
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pocket", id: 568494494
