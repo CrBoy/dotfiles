@@ -1,4 +1,5 @@
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
-pyenv init - | source
-pyenv virtualenv-init - | source
+status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
