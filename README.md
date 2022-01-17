@@ -4,7 +4,7 @@ CrBoy's Dotfiles
 
 Introduction
 ------------
-Here's some of my dotfiles in usual. A dotflie means those files begin with a `.`, e.g. `.zshrc`, `.screenrc`, or `.vimrc`. They usually stand for a configuration of some software.
+Here's some of my dotfiles in usual. A dotfile means those files begin with a `.`, e.g. `.zshrc`, `.screenrc`, or `.vimrc`. They usually stand for a configuration of some software.
 
 If [git] and [stow] is installed on the machine, these settings could be installed by only one step on most of Unix-like OS.
 
