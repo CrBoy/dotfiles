@@ -1,4 +1,4 @@
-CrBoy's Dotflies
+CrBoy's Dotfiles
 ================
 `Author: CrBoy (http://github.com/CrBoy)`
 
