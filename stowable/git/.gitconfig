@@ -5,7 +5,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-	whitespace = indent-with-non-tab, space-before-tab, trailing-space, cr-at-eol
+	whitespace = space-before-tab, trailing-space, cr-at-eol
+	quotepath = false
 
 [color]
 	ui = auto
@@ -30,3 +31,7 @@
 
 [push]
 	default = simple
+[init]
+	defaultBranch = main
+[diff]
+	tool = /usr/local/bin/vimdiff
