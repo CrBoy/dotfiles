@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'Shougo/neosnippet-snippets'
 " Plug 'tpope/vim-fugitive'
 " Plug 'flazz/vim-colorschemes'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
