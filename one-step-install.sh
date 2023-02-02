@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOTFILES=~/.dotfiles
+DOTFILES=~/_dotfiles
 
 die(){
 	echo "$1" >&2
