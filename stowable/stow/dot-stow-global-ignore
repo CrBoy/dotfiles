@@ -1,0 +1,9 @@
+\.git
+\.gitignore
+
+\.+~          # emacs backup files
+\.*.swp       # vim swp file
+
+README.*
+LICENSE.*
+COPYING

@@ -1,10 +1,2 @@
-
-\.git
-\.gitignore
-\.gitmodules
-
-^/README.*
-^/LICENSE.*
-^/COPYING
-
-.+\.sh
+install\.sh
+README.md
