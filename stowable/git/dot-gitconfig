@@ -21,13 +21,17 @@
 
 [alias]
 	st = status
+	stig = status --ignored
 	ci = commit
 	co = checkout
 	br = branch
 	lg = log --graph --all --decorate
-	lg1 = log --graph --all --decorate --oneline
-	lgs = log --graph --all --decorate --oneline --max-count=20
-	lgss = log --graph --all --decorate --oneline --simplify-by-decoration
+	lg1 = log --graph --all --format=format:'%C(auto)%h%(decorate:tag=%x23,pointer=->)%C(reset) %C(white)%s%C(reset) %C(blue)(%an, %ar)%C(reset)'
+	lgs = lg1 --max-count=20
+	lgss = lg1 --simplify-by-decoration
+	lgf = log --graph --all --decorate --format=fuller
+
+	lgd2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)- %an%C(reset)' --abbrev-commit
 
 [push]
 	default = simple
