@@ -1,0 +1,15 @@
+command = /opt/homebrew/bin/fish
+cursor-style = block
+quit-after-last-window-closed = true
+# quit-after-last-window-closed-delay = 5s # Linux only QQ
+keybind = global:option+space=toggle_quick_terminal
+
+quick-terminal-position = center
+# quick-terminal-size = 25%,75%
+window-width = 160
+window-height = 60
+
+font-family = "Agave Nerd Font"
+font-size = 16
+
+theme = "CrBoy"
